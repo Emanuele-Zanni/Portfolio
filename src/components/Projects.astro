@@ -1,0 +1,50 @@
+---
+import JavaScript from "../icons/tech/Javascript.astro";
+
+const TAGS = {
+  JS: {
+    name: "Javascript",
+    class: "bg-[#3b3b3b] text-white",
+    icon: JavaScript,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Project 1",
+    decription: "lorem ipsum dolor sit amet, consectetur",
+    link: "#",
+    github: "#",
+    image: "",
+    tags: [TAGS.JS],
+  },
+];
+---
+
+<!--! TAMBIEN SE PUEDE HACER DESTRUCTURING EN VEZ DE USTAR "porject" y acceder a las propiedades dentro del objeto  -->{
+  PROJECTS.map((project) => (
+    <article>
+      <h3 class="text-2x font-semibold text-yellow-200 mb-2 ">
+        {project.title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{project.decription}</p>
+      <ul class="flex gap-x-4 flex-row mb-2">
+        {project.tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-m items-center ${tag.class} py-2 px-3`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={project.image}
+        alt={`Caputa de pantalla del proyecto ${project.image}`}
+      />
+    </article>
+  ))
+}
