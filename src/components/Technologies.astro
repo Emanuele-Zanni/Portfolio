@@ -1,0 +1,60 @@
+---
+import Card from "./Card.astro";
+import Javascript from "../icons/tech/Javascript.astro";
+
+// import { TECHS } from "../db/Techs.astro";
+import { PROJECTS } from "./Projects.astro";
+
+// const TECHS = [
+//   {
+//     name: "Javascript",
+//     class: "bg-[#3b3b3b] text-white",
+//     icon: Javascript,
+//   },
+// ];
+
+export const TECHS = [
+  {
+    name: "Javascript",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Javascript,
+  },
+  {
+    name: "Javascript",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Javascript,
+  },
+  {
+    name: "Javascript",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Javascript,
+  },
+  {
+    name: "Javascript",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Javascript,
+  },
+  {
+    name: "Javascript",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Javascript,
+  },
+];
+---
+
+<div class="flex justify-center gap-x-9">
+  {
+    TECHS.map((tech) => (
+      <div
+        class="max-w-40 max-h-50 border border-gray-200 rounded-lg justify-center shadow 
+      hover:scale-[1.15] ease-in-out duration-300
+      flex flex-col items-center p-4 justify-center"
+      >
+        {/* <div class="m-5 justify-center flex items-center flex-col"> */}
+        <h5 class="mb-2 text-2xl font-bold">{tech.name}</h5>
+        <tech.icon class="size-20" />
+        {/* </div> */}
+      </div>
+    ))
+  }
+</div>
