@@ -1,6 +1,10 @@
 ---
-import JavaScript from "../icons/tech/Javascript.astro";
+import JavaScript from "../icons/tech/langs/Javascript.astro";
+import Github from "../icons/Github.astro";
+import Link from "../icons/Link.astro";
+import ecommerce from "../icons/ecommerce.png";
 
+// Aprender a importar correctamente el array de TECHS en Technologies, y mover ese hacia una carpeta "utils"
 export const TECHS = {
   JS: {
     name: "Javascript",
@@ -11,14 +15,25 @@ export const TECHS = {
 
 export const PROJECTS = [
   {
-    title: "Project 1",
-    decription: "lorem ipsum dolor sit amet, consectetur",
-    link: "#",
-    github: "#",
-    image: "",
+    title: "Dionisio Wine Company",
+    decription:
+      "Un e-commerce realizado en conjunto a un grupo de 5 personas, fue mi proyecto introductorio al trabajo en equipo y al uso correcto de los commits en github",
+    link: "www.youtube.com",
+    github: "www.google.com",
+    image: ecommerce,
     tags: [TECHS.JS],
   },
+  // {
+  //   title: "Project 1",
+  //   decription: "lorem ipsum dolor sit amet, consectetur",
+  //   link: "#",
+  //   github: "#",
+  //   image: "",
+  //   tags: [TECHS.JS],
+  // },
 ];
+
+// console.log(ecommerce);
 ---
 
 <!--! TAMBIEN SE PUEDE HACER DESTRUCTURING EN VEZ DE USTAR "porject" y acceder a las propiedades dentro del objeto  -->{
@@ -28,6 +43,23 @@ export const PROJECTS = [
         {project.title}
       </h3>
       <p class="text-lg mb-4 text-pretty">{project.decription}</p>
+
+      <ul class="flex gap-x-4 flex-row mb-2">
+        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
+          <Github class="size-7" />
+        </span>
+
+        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
+          <Link class="size-8" />
+        </span>
+      </ul>
+
+      <img
+        class="w-[355px] h-[220px] rounded shadow-2xl shadow-white/10"
+        src={project.image.src}
+        alt="Captura de pantalla del proyecto"
+      />
+
       <ul class="flex gap-x-4 flex-row mb-2">
         {project.tags.map((tag) => (
           <li>
@@ -40,11 +72,6 @@ export const PROJECTS = [
           </li>
         ))}
       </ul>
-      <img
-        class="rounded shadow-2xl shadow-white/10"
-        src={project.image}
-        alt={`Caputa de pantalla del proyecto ${project.image}`}
-      />
     </article>
   ))
 }

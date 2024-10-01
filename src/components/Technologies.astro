@@ -1,18 +1,96 @@
 ---
-import Card from "./Card.astro";
-import Javascript from "../icons/tech/Javascript.astro";
+import Javascript from "../icons/tech/langs/Javascript.astro";
+import Typescript from "../icons/tech/langs/Typescript.astro";
+import Css from "../icons/tech/langs/Css.astro";
+import Html5 from "../icons/tech/langs/Html5.astro";
+import Java from "../icons/tech/langs/Java.astro";
 
-// import { TECHS } from "../db/Techs.astro";
-import { PROJECTS } from "./Projects.astro";
+import Nest from "../icons/tech/frameworks/NestJS.astro";
+import Astre from "../icons/tech/frameworks/Astre.astro";
+import Bootstrap from "../icons/tech/frameworks/Bootstrap.astro";
+import Tailwind from "../icons/tech/frameworks/Tailwind.astro";
+import Express from "../icons/tech/frameworks/ExpressJS.astro";
 
-// const TECHS = [
-//   {
-//     name: "Javascript",
-//     class: "bg-[#3b3b3b] text-white",
-//     icon: Javascript,
-//   },
-// ];
+import PostgreSQL from "../icons/tech/database/PostgreSQL.astro";
+import Mongo from "../icons/tech/database/MongoDB.astro";
+import MySQL from "../icons/tech/database/MySQL.astro";
 
+import Auth0 from "../icons/tech/auth/Auth0.astro";
+
+import Netlify from "../icons/tech/deploy/Netlify.astro";
+
+import Jasmine from "../icons/tech/testing/Jasmine.astro";
+import Jest from "../icons/tech/testing/Jest.astro";
+
+import NodeJS from "../icons/tech/enviroments/NodeJS.astro";
+import Git from "../icons/tech/other/Git.astro";
+import JWT from "../icons/tech/other/JWT.astro";
+import TypeORM from "../icons/tech/other/TypeORM.astro";
+
+import Placeholder from "../icons/tech/other/Placeholder.astro";
+
+export const OTHERS = [
+  {
+    name: "PostgresSQL",
+    class: "bg-[#3b3b3b] text-white",
+    icon: PostgreSQL,
+  },
+  {
+    name: "MongoDB",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Mongo,
+  },
+  {
+    name: "MySQL",
+    class: "bg-[#3b3b3b] text-white",
+    icon: MySQL,
+  },
+  {
+    name: "Auth0",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Auth0,
+  },
+  {
+    name: "Netlify",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Netlify,
+  },
+  {
+    name: "Render",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Placeholder,
+  },
+  {
+    name: "NodeJS",
+    class: "bg-[#3b3b3b] text-white",
+    icon: NodeJS,
+  },
+  {
+    name: "Git",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Git,
+  },
+  {
+    name: "JWT",
+    class: "bg-[#3b3b3b] text-white",
+    icon: JWT,
+  },
+  {
+    name: "TypeORM",
+    class: "bg-[#3b3b3b] text-white",
+    icon: TypeORM,
+  },
+  {
+    name: "Jasmine",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Jasmine,
+  },
+  {
+    name: "Jest",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Jest,
+  },
+];
 export const TECHS = [
   {
     name: "Javascript",
@@ -20,39 +98,117 @@ export const TECHS = [
     icon: Javascript,
   },
   {
-    name: "Javascript",
+    name: "Typescript",
     class: "bg-[#3b3b3b] text-white",
-    icon: Javascript,
+    icon: Typescript,
   },
   {
-    name: "Javascript",
+    name: "Java",
     class: "bg-[#3b3b3b] text-white",
-    icon: Javascript,
+    icon: Java,
   },
   {
-    name: "Javascript",
+    name: "HTML 5",
     class: "bg-[#3b3b3b] text-white",
-    icon: Javascript,
+    icon: Html5,
   },
   {
-    name: "Javascript",
+    name: "CSS",
     class: "bg-[#3b3b3b] text-white",
-    icon: Javascript,
+    icon: Css,
+  },
+];
+
+export const FRAMEWORKS = [
+  {
+    name: "Nest",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Nest,
+  },
+  {
+    name: "Astro",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Astre,
+  },
+  {
+    name: "Tailwind",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Tailwind,
+  },
+  {
+    name: "Bootstrap",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Bootstrap,
+  },
+  {
+    name: "Express",
+    class: "bg-[#3b3b3b] text-white",
+    icon: Express,
   },
 ];
 ---
+
+<div class="flex items-center justify-center mt-10 mb-5 mt-14">
+  <div class="flex-grow border-t border-white-500"></div>
+  <h2 class="mx-4 text-[2rem] font-normal text-center">Lenguajes</h2>
+  <div class="flex-grow border-t border-white-500"></div>
+</div>
 
 <div class="flex justify-center gap-x-9">
   {
     TECHS.map((tech) => (
       <div
-        class="max-w-40 max-h-50 border border-gray-200 rounded-lg justify-center shadow 
-      hover:scale-[1.15] ease-in-out duration-300
+        class="min-w-[9rem] max-w-[9rem] max-h-50 border border-gray-200 rounded-lg justify-center shadow 
+      hover:scale-[1.15] ease-in-out duration-200
       flex flex-col items-center p-4 justify-center"
       >
         {/* <div class="m-5 justify-center flex items-center flex-col"> */}
         <h5 class="mb-2 text-2xl font-bold">{tech.name}</h5>
         <tech.icon class="size-20" />
+        {/* </div> */}
+      </div>
+    ))
+  }
+</div>
+
+<div class="flex items-center justify-center mt-10 mb-5 mt-14">
+  <div class="flex-grow border-t border-white-500"></div>
+  <h2 class="mx-4 text-[2rem] font-normal text-center">Frameworks</h2>
+  <div class="flex-grow border-t border-white-500"></div>
+</div>
+
+<div class="flex justify-center gap-x-9">
+  {
+    FRAMEWORKS.map((frame) => (
+      <div
+        class="min-w-[9rem] max-w-[9rem] max-h-50 border border-gray-200 rounded-lg justify-center shadow 
+        hover:scale-[1.15] ease-in-out duration-200
+        flex flex-col items-center p-4 justify-center"
+      >
+        <h5 class="mb-2 text-2xl font-bold">{frame.name}</h5>
+        <frame.icon class="size-20" />
+      </div>
+    ))
+  }
+</div>
+
+<div class="flex items-center justify-center mt-10 mb-5 mt-14">
+  <div class="flex-grow border-t border-white-500"></div>
+  <h2 class="mx-4 text-[2rem] font-normal text-center">Otros</h2>
+  <div class="flex-grow border-t border-white-500"></div>
+</div>
+
+<div class="flex justify-center gap-x-9 gap-y-8 flex-wrap">
+  {
+    OTHERS.map((Other) => (
+      <div
+        class="min-w-[9rem] max-w-[9rem] max-h-50 border border-gray-200 rounded-lg justify-center shadow 
+        hover:scale-[1.15] ease-in-out duration-200
+        flex flex-col items-center p-4 justify-center "
+      >
+        {/* <div class="m-5 justify-center flex items-center flex-col"> */}
+        <h5 class="mb-2 text-2xl font-bold">{Other.name}</h5>
+        <Other.icon class="size-20" />
         {/* </div> */}
       </div>
     ))
