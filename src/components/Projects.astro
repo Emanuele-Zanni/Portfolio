@@ -40,10 +40,12 @@ import Carousel from "../components/GlideCarousel.astro";
 <!--! TAMBIEN SE PUEDE HACER DESTRUCTURING EN VEZ DE USTAR "porject" y acceder a las propiedades dentro del objeto  -->{
   PROJECTS.map((project) => (
     <article>
-      <h3 class="text-2x font-semibold text-yellow-200 mb-2 ">
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2 ">
         {project.title}
       </h3>
-      <p class="text-lg mb-4 text-pretty">{project.decription}</p>
+      <p class="text-base mb-4 text-pretty text-white/85">
+        {project.decription}
+      </p>
       <ul class="flex gap-x-4 flex-row mb-2">
         {project.tags.map((tag) => (
           <li>
@@ -61,13 +63,25 @@ import Carousel from "../components/GlideCarousel.astro";
         <Carousel />
       </div>
       <ul class="flex gap-x-4 flex-row mb-2">
-        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
-          <Github class="size-7" />
-        </span>
+        <a
+          href="https://github.com/Emanuele-Zanni/Dionisio-Wine-Company"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 border">
+            <Github class="size-7" />
+          </span>
+        </a>
 
-        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
-          <Link class="size-8" />
-        </span>
+        <a
+          href="https://dionisiowines.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 border">
+            <Link class="size-7" />
+          </span>
+        </a>
       </ul>
     </article>
   ))

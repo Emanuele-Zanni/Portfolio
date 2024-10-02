@@ -1,6 +1,7 @@
 ---
 import ecommerce from "../icons/ecommerce.png";
 import code from "../icons/code.png";
+
 import ArrowL from "../icons/ArrowL.astro";
 import ArrowR from "../icons/ArrowR.astro";
 ---
@@ -10,15 +11,6 @@ import ArrowR from "../icons/ArrowR.astro";
     <ul class="glide__slides">
       <li class="glide__slide">
         <img src={ecommerce.src} alt="Ecommerce" />
-      </li>
-      <li class="glide__slide">
-        <img src={code.src} alt="Code" />
-      </li>
-      <li class="glide__slide">
-        <img src={code.src} alt="Another" />
-      </li>
-      <li class="glide__slide">
-        <img src={ecommerce.src} alt="Fourth" />
       </li>
     </ul>
   </div>
@@ -53,7 +45,7 @@ import ArrowR from "../icons/ArrowR.astro";
 
   <style>
     .glide__slide {
-      height: 260px !important;
+      height: 200px !important;
     }
 
     .glide__arrow {
@@ -88,8 +80,8 @@ import ArrowR from "../icons/ArrowR.astro";
     }
 
     .glide__slide img {
-      width: 355px !important;
-      height: 230px !important;
+      width: 325px !important;
+      height: 200px !important;
       object-fit: cover;
     }
   </style>
