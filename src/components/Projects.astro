@@ -34,6 +34,7 @@ export const PROJECTS = [
 ];
 
 // console.log(ecommerce);
+import Carousel from "../components/GlideCarousel.astro";
 ---
 
 <!--! TAMBIEN SE PUEDE HACER DESTRUCTURING EN VEZ DE USTAR "porject" y acceder a las propiedades dentro del objeto  -->{
@@ -43,23 +44,6 @@ export const PROJECTS = [
         {project.title}
       </h3>
       <p class="text-lg mb-4 text-pretty">{project.decription}</p>
-
-      <ul class="flex gap-x-4 flex-row mb-2">
-        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
-          <Github class="size-7" />
-        </span>
-
-        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
-          <Link class="size-8" />
-        </span>
-      </ul>
-
-      <img
-        class="w-[355px] h-[220px] rounded shadow-2xl shadow-white/10"
-        src={project.image.src}
-        alt="Captura de pantalla del proyecto"
-      />
-
       <ul class="flex gap-x-4 flex-row mb-2">
         {project.tags.map((tag) => (
           <li>
@@ -72,6 +56,26 @@ export const PROJECTS = [
           </li>
         ))}
       </ul>
+
+      <div class="flex justify-center">
+        <Carousel />
+      </div>
+      <ul class="flex gap-x-4 flex-row mb-2">
+        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
+          <Github class="size-7" />
+        </span>
+
+        <span class="flex gap-x-2 rounded-full text-m items-center py-2 px-3 bg-[#3b3b3b]">
+          <Link class="size-8" />
+        </span>
+      </ul>
     </article>
   ))
 }
+
+<!--! ASI ES COMO SE CARGA UNA IMAGEN ESTATICA  -->
+<!-- <img
+class="w-[355px] h-[220px] rounded shadow-2xl shadow-white/10"
+src={project.image.src}
+alt="Captura de pantalla del proyecto"
+/> -->

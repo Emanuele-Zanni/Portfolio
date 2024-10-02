@@ -1,0 +1,96 @@
+---
+import ecommerce from "../icons/ecommerce.png";
+import code from "../icons/code.png";
+import ArrowL from "../icons/ArrowL.astro";
+import ArrowR from "../icons/ArrowR.astro";
+---
+
+<div class="glide carousel">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide">
+        <img src={ecommerce.src} alt="Ecommerce" />
+      </li>
+      <li class="glide__slide">
+        <img src={code.src} alt="Code" />
+      </li>
+      <li class="glide__slide">
+        <img src={code.src} alt="Another" />
+      </li>
+      <li class="glide__slide">
+        <img src={ecommerce.src} alt="Fourth" />
+      </li>
+    </ul>
+  </div>
+  <div class="glide__arrows" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+      <ArrowL />
+    </button>
+    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+      <ArrowR />
+    </button>
+  </div>
+
+  <script>
+    import Glide from "@glidejs/glide";
+    import "@glidejs/glide/dist/css/glide.core.min.css";
+    import "@glidejs/glide/dist/css/glide.theme.min.css";
+
+    const carousel = document.querySelector(".carousel");
+    const glide = new Glide(carousel, {
+      type: "carousel-slider",
+      perView: 3.25, // Muestra 3 imágenes completas y 1/4 de la cuarta
+      focusAt: 0, // Enfoca la primera imagen
+      gap: 10, // Espacio entre imágenes
+      autoplay: 3000, // Opcional
+      hoverpause: true, // Pausa en hover
+      rewind: true,
+      bound: true,
+    });
+
+    glide.mount();
+  </script>
+
+  <style>
+    .glide__slide {
+      height: 260px !important;
+    }
+
+    .glide__arrow {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .glide.carousel {
+      width: 100%; /* Ajusta el ancho del carrusel */
+      height: 100%; /* Altura de las imágenes */
+      overflow: hidden;
+    }
+
+    .glide__arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    .glide__arrow--left {
+      left: 10px;
+    }
+
+    .glide__arrow--right {
+      right: 10px;
+    }
+
+    .glide__track {
+      padding-bottom: 20px; /* Espacio para los botones */
+    }
+
+    .glide__slide img {
+      width: 355px !important;
+      height: 230px !important;
+      object-fit: cover;
+    }
+  </style>
+</div>
