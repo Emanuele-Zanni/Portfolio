@@ -59,8 +59,14 @@ import Carousel from "../components/GlideCarousel.astro";
         ))}
       </ul>
 
-      <div class="flex justify-center">
-        <Carousel />
+      <div class="flex justify-center">{/* <Carousel /> */}</div>
+
+      <div class="flex my-4">
+        <img
+          class="w-[200px] h-[150px] rounded shadow-2xl shadow-white/10"
+          src={project.image.src}
+          alt="Captura de pantalla del proyecto"
+        />
       </div>
       <ul class="flex gap-x-4 flex-row mb-2">
         <a
