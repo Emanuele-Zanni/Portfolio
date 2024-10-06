@@ -1,34 +1,75 @@
-<footer
-  id="contacto"
-  class="flex flex-col pt-5 pb-4 bg-[#1f1e2d]/80 font-inter"
->
-  <div class="flex">
-    <!-- justify-between -->
-    <div class="flex flex-col ml-12">
-      <h1 class="text-2xl mb-2">Contacto</h1>
-      <ul class="text-lg w-80">
-        <li>Tel: 1123414119</li>
-        <li>Mail: emazanni2022@gmail.com</li>
-        <li>Discord: emanuele.zanni</li>
-        <li>Instagram: @manuu4yu</li>
-        <li>LinkedIn: Emanuele Zanni</li>
-        <li>Github: Emanuele-Zanni</li>
-      </ul>
-    </div>
-    <!-- <div class="px-[32rem]"></div> -->
+---
+import Github from "../icons/general/Github.astro";
+import Discord from "../icons/general/Discord.astro";
+import Instagram from "../icons/general/Instagram.astro";
+import Mail from "../icons/general/MailFooter.astro";
+import Phone from "../icons/general/Phone.astro";
+import LinkedIn from "../icons/general/LinkedInFooter.astro";
+---
 
-    <div class="ml-[62rem] mr-8 pr-12 text-justify">
-      Lorem Ipsum dolor sit amet, consectetur adipiscing elit in el Lorem ipsum
-      dolor, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-      nesciunt sed consequuntur excepturi, dolor repellat ut libero iusto, ad
-      nemo architecto sint quidem itaque corrupti illo aliquam obcaecati
-      possimus. Nulla. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-      Maxime eaque architecto accusantium, qui consectetur quam culpa ad animi
-      ratione! Labore dolorum deleniti?
+<footer id="contacto" class="pt-5 pb-4 bg-[#1f1e2d]/80 font-inter">
+  <div class="flex items-center">
+    <div class="flex">
+      <!-- justify-between -->
+      <div class="flex flex-col ml-12">
+        <h1 class="text-2xl mb-2">Contacto</h1>
+        <ul class="text-lg w-80">
+          <li>
+            <label class="flex items-center" title=" Numero de Celular">
+              <Phone class="size-6" />
+              <span class="ml-2"></span>1123414119
+            </label>
+          </li>
+
+          <li>
+            <label class="flex items-center">
+              <Instagram class="size-6" />
+              <span class="ml-1.5"></span>@manuu4yu
+            </label>
+          </li>
+
+          <li>
+            <label class="flex items-center">
+              <Github class="size-6" />
+              <span class="ml-2"></span>Emanuele-Zanni
+            </label>
+          </li>
+
+          <li>
+            <label class="flex items-center">
+              <Discord class="size-6" />
+              <span class="ml-2"></span>emanuele.zanni
+            </label>
+          </li>
+
+          <li>
+            <label class="flex items-center">
+              <LinkedIn class="size-6" />
+              <span class="ml-2"></span>Emanuele Zanni
+            </label>
+          </li>
+
+          <li>
+            <label class="flex items-center">
+              <Mail class="size-6" />
+              <span class="ml-2"></span>emazanni2022@gmail.com
+            </label>
+          </li>
+        </ul>
+        <!--  -->
+      </div>
+    </div>
+    <div class="px-[32rem]"></div>
+    <!-- ml-[62rem] -->
+
+    <div class="mr-8 pr-12 text-justify mt-6 py-6 px-5 border flex size-fit">
+      Esta página está en constante evolución y seguirá recibiendo mejoras a
+      medida que continúe perfeccionando mis habilidades como programador. Cada
+      actualización reflejará mi crecimiento, esfuerzo y dedicación para
+      ofrecerte una mejor experiencia.
     </div>
   </div>
-
-  <span class="text-center"
-    >Copyright (c) 2024 - Todos los derechos reservados</span
-  >
+  <div class="text-center">
+    Copyright (c) 2024 - Todos los derechos reservados
+  </div>
 </footer>
