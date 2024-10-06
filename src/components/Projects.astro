@@ -4,7 +4,28 @@ import Github from "../icons/general/Github.astro";
 import Link from "../icons/Link.astro";
 import ecommerce from "../icons/ecommerce.png";
 
-// Aprender a importar correctamente el array de TECHS en Technologies, y mover ese hacia una carpeta "utils"
+import { OTHERS } from "../db/TechIcons";
+import { LANGS } from "../db/TechIcons";
+import { FRAMEWORKS } from "../db/TechIcons";
+
+const OtherIcons = OTHERS.map((item) => ({
+  name: item.name,
+  class: item.class,
+  icon: item.icon,
+}));
+
+const LangsIcons = LANGS.map((item) => ({
+  name: item.name,
+  class: item.class,
+  icon: item.icon,
+}));
+
+const FrameIcons = FRAMEWORKS.map((item) => ({
+  name: item.name,
+  class: item.class,
+  icon: item.icon,
+}));
+
 export const TECHS = {
   JS: {
     name: "Javascript",
@@ -17,27 +38,32 @@ export const PROJECTS = [
   {
     title: "Dionisio Wine Company",
     decription:
-      "Un e-commerce realizado en conjunto a un grupo de 5 personas, fue mi proyecto introductorio al trabajo en equipo y al uso correcto de los commits en github",
+      "Este proyecto de e-commerce fue el primer gran desafío que abordé en colaboración con un equipo de cinco personas. Más que un simple desarrollo, fue una experiencia enriquecedora que me introdujo de lleno en la dinámica del trabajo en equipo, donde la comunicación y la coordinación fueron clave para alcanzar nuestros objetivos. Además, me permitió perfeccionar el uso de GitHub, aprendiendo a realizar commits efectivos y a gestionar el flujo de trabajo de manera profesional. Este proyecto no solo fortaleció mis habilidades técnicas, sino que también me enseñó la importancia de una colaboración fluida y bien organizada.",
     link: "www.youtube.com",
     github: "www.google.com",
     image: ecommerce,
-    tags: [TECHS.JS],
+    tags: [
+      FRAMEWORKS[0],
+      FRAMEWORKS[6],
+      FRAMEWORKS[2],
+      LANGS[2],
+      LANGS[1],
+      OTHERS[0],
+      OTHERS[3],
+      OTHERS[4],
+      OTHERS[5],
+      OTHERS[8],
+      OTHERS[9],
+      OTHERS[10],
+    ],
   },
-  // {
-  //   title: "Project 1",
-  //   decription: "lorem ipsum dolor sit amet, consectetur",
-  //   link: "#",
-  //   github: "#",
-  //   image: "",
-  //   tags: [TECHS.JS],
-  // },
 ];
 
 // console.log(ecommerce);
 // import Carousel from "../components/GlideCarousel.astro";
 ---
 
-<!--! TAMBIEN SE PUEDE HACER DESTRUCTURING EN VEZ DE USTAR "porject" y acceder a las propiedades dentro del objeto  -->{
+<!--! TAMBIEN SE PUEDE HACER DESTRUCTURING EN VEZ DE USTAR "project" y acceder a las propiedades dentro del objeto  -->{
   PROJECTS.map((project) => (
     <article>
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2 ">
@@ -46,20 +72,21 @@ export const PROJECTS = [
       <p class="text-base mb-4 text-pretty text-white/85">
         {project.decription}
       </p>
-      <ul class="flex gap-x-4 flex-row mb-2">
-        {project.tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-m items-center ${tag.class} py-2 px-3`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
+      <ul class="flex flex-wrap gap-x-4 gap-y-3 flex-row mb-2">
+        {project.tags.map((tag) => {
+          const IconComponent = tag.icon;
+          return (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-m items-center ${tag.class} py-2 px-3`}
+              >
+                <IconComponent class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          );
+        })}
       </ul>
-
-      <div class="flex justify-center">{/* <Carousel /> */}</div>
 
       <div class="flex my-4">
         <img
@@ -94,8 +121,48 @@ export const PROJECTS = [
 }
 
 <!--! ASI ES COMO SE CARGA UNA IMAGEN ESTATICA  -->
+
 <!-- <img
 class="w-[355px] h-[220px] rounded shadow-2xl shadow-white/10"
 src={project.image.src}
 alt="Captura de pantalla del proyecto"
 /> -->
+
+<!--! CarouselGlide  -->
+{/* <div class="flex justify-center">{ <Carousel /> }</div> */}
+
+<!--! UL VIEJO  -->
+<!-- 
+{project.tags.map((tag) => (
+  <li>
+    <span
+      class={`flex gap-x-2 rounded-full text-m items-center ${tag.class} py-2 px-3`}
+    >
+      <tag.icon class="size-4" />
+      {tag.name}
+    </span>
+  </li>
+))}
+</ul> -->
+
+<!--! LA QUE ME DIO GPT  -->
+
+<!-- <article>
+  <ul class="flex gap-x-4 flex-row mb-2">
+    {
+      LangsIcons.map((tag) => {
+        const IconComponent = tag.icon;
+        return (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-m items-center ${tag.class} py-2 px-3`}
+            >
+              <IconComponent class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</article> -->
