@@ -7,7 +7,10 @@ import Phone from "../icons/general/Phone.astro";
 import LinkedIn from "../icons/general/LinkedInFooter.astro";
 ---
 
-<footer id="contacto" class="pt-5 pb-4 bg-[#1f1e2d]/80 font-inter">
+<footer
+  id="contacto"
+  class="pt-5 pb-4 bg-[#1f1e2d]/80 font-inter w-[100vh] md:w-screen"
+>
   <div class="flex items-center">
     <div class="flex">
       <!-- justify-between -->
@@ -59,7 +62,9 @@ import LinkedIn from "../icons/general/LinkedInFooter.astro";
         <!--  -->
       </div>
     </div>
-    <div class="px-[32rem]"></div>
+    <!--! ESTO FUE COMENTADO PORQUE ME ROMPIA EL RESPONSIVE DE MI PAGINA, ME agrandaba el ancho total del vw de mobile, esto estaba utilizado para separar los elementos del footer, buscar alternativa  -->
+    <!-- <div class="px-[32rem]"></div> -->
+    <!--! Hasta aca xd, lo de abajo ni idea  -->
     <!-- ml-[62rem] -->
 
     <div class="mr-8 pr-12 text-justify mt-6 py-6 px-5 border flex size-fit">
