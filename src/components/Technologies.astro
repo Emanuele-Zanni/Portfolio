@@ -29,6 +29,9 @@ import TypeORM from "../icons/tech/other/TypeORM.astro";
 
 import Placeholder from "../icons/tech/other/Placeholder.astro";
 
+import Section from "./Section.astro";
+import TechsIcon from "../icons/Techs.astro";
+
 export const OTHERS = [
   {
     name: "PostgresSQL",
@@ -148,14 +151,18 @@ export const FRAMEWORKS = [
 ];
 ---
 
-<div class="flex items-center justify-center mt-10 mb-5">
+<div
+  class="flex items-center justify-center mt-10 mb-5 w-[90vh] mx-auto md:w-full"
+>
   <div class="flex-grow border-t border-white-500"></div>
   <h2 class="mx-4 text-[2rem] font-normal text-center">Lenguajes</h2>
   <div class="flex-grow border-t border-white-500"></div>
 </div>
 
 <!-- Sección Lenguajes -->
-<div class="grid grid-cols-5 gap-x-6 md:gap-28 justify-items-center">
+<div
+  class="grid grid-cols-5 md:gap-28 justify-items-center w-[740px] mx-auto gap-x-16 md:w-full"
+>
   {
     TECHS.map((tech) => (
       <div
@@ -171,13 +178,17 @@ export const FRAMEWORKS = [
 </div>
 
 <!-- Sección Frameworks -->
-<div class="flex items-center justify-center mt-10 mb-5">
+<div
+  class="flex items-center justify-center mt-10 mb-5 w-[90vh] mx-auto md:w-full"
+>
   <div class="flex-grow border-t border-white-500"></div>
   <h2 class="mx-4 text-[2rem] font-normal text-center">Frameworks</h2>
   <div class="flex-grow border-t border-white-500"></div>
 </div>
 
-<div class="grid grid-cols-5 md:gap-28 justify-items-center">
+<div
+  class="grid grid-cols-5 md:gap-28 justify-items-center w-[740px] mx-auto gap-x-16"
+>
   {
     FRAMEWORKS.map((frame) => (
       <div
@@ -193,14 +204,16 @@ export const FRAMEWORKS = [
 </div>
 
 <!-- Sección Otros -->
-<div class="flex items-center justify-center mt-10 mb-5">
+<div
+  class="flex items-center justify-center mt-10 mb-5 w-[90vh] mx-auto md:w-full"
+>
   <div class="flex-grow border-t border-white-500"></div>
   <h2 class="mx-4 text-[2rem] font-normal text-center">Otros</h2>
   <div class="flex-grow border-t border-white-500"></div>
 </div>
 
 <div
-  class="grid grid-cols-4 md:grid-cols-5 md:gap-x-28 gap-y-6 justify-items-center"
+  class="grid grid-cols-4 md:grid-cols-5 md:gap-x-28 gap-y-6 justify-items-center w-[740px] mx-auto"
 >
   {
     OTHERS.map((Other) => (
@@ -216,6 +229,7 @@ export const FRAMEWORKS = [
     ))
   }
 </div>
+
 <!--! BACKUP dimension imagenes  -->
 <!-- min-w-[9rem] max-w-[9rem] -->
 <!-- lg:min-w-[14.8vw] lg:max-h-[17vh] -->
