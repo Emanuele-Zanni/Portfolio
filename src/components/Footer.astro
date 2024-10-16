@@ -11,70 +11,84 @@ import LinkedIn from "../icons/general/LinkedInFooter.astro";
   id="contacto"
   class="pt-5 pb-4 bg-[#1f1e2d]/80 font-inter w-[100vh] md:w-screen"
 >
-  <div class="flex items-center">
-    <div class="flex">
-      <!-- justify-between -->
-      <div class="flex flex-col ml-12">
-        <h1 class="text-2xl mb-2">Contacto</h1>
-        <ul class="text-lg w-80">
-          <li>
-            <label class="flex items-center" title="Celular">
-              <Phone class="size-6" />
-              <span class="ml-2"></span>1123414119
-            </label>
-          </li>
+  <div class="grid grid-cols-5 lg:grid-cols-4">
+    <!-- justify-between -->
+    <div class="flex flex-col ml-12">
+      <h1 class="text-2xl mb-2">Contacto</h1>
+      <ul class="text-lg w-80">
+        <li>
+          <label class="flex items-center" title="Celular">
+            <Phone class="size-6" />
+            <span class="ml-2"></span>1123414119
+          </label>
+        </li>
 
-          <li>
-            <label class="flex items-center" title="Instagram">
-              <Instagram class="size-6" />
-              <span class="ml-1.5"></span>@manuu4yu
-            </label>
-          </li>
+        <li>
+          <label class="flex items-center" title="Instagram">
+            <Instagram class="size-6" />
+            <span class="ml-1.5"></span>@manuu4yu
+          </label>
+        </li>
 
-          <li>
-            <label class="flex items-center" title="Github">
-              <Github class="size-6" />
-              <span class="ml-2"></span>Emanuele-Zanni
-            </label>
-          </li>
+        <li>
+          <label class="flex items-center" title="Github">
+            <Github class="size-6" />
+            <span class="ml-2"></span>Emanuele-Zanni
+          </label>
+        </li>
 
-          <li>
-            <label class="flex items-center" title="Discord">
-              <Discord class="size-6" />
-              <span class="ml-2"></span>emanuele.zanni
-            </label>
-          </li>
+        <li>
+          <label class="flex items-center" title="Discord">
+            <Discord class="size-6" />
+            <span class="ml-2"></span>emanuele.zanni
+          </label>
+        </li>
 
-          <li>
-            <label class="flex items-center" title="LinkedIn">
-              <LinkedIn class="size-6" />
-              <span class="ml-2"></span>Emanuele Zanni
-            </label>
-          </li>
+        <li>
+          <label class="flex items-center" title="LinkedIn">
+            <LinkedIn class="size-6" />
+            <span class="ml-2"></span>Emanuele Zanni
+          </label>
+        </li>
 
-          <li>
-            <label class="flex items-center" title="Mail">
-              <Mail class="size-6" />
-              <span class="ml-2"></span>emazanni2022@gmail.com
-            </label>
-          </li>
-        </ul>
-        <!--  -->
-      </div>
+        <li>
+          <label class="flex items-center" title="Mail">
+            <Mail class="size-6" />
+            <span class="ml-2"></span>emazanni2022@gmail.com
+          </label>
+        </li>
+      </ul>
     </div>
-    <!--! ESTO FUE COMENTADO PORQUE ME ROMPIA EL RESPONSIVE DE MI PAGINA, ME agrandaba el ancho total del vw de mobile, esto estaba utilizado para separar los elementos del footer, buscar alternativa  -->
-    <!-- <div class="px-[32rem]"></div> -->
-    <!--! Hasta aca xd, lo de abajo ni idea  -->
-    <!-- ml-[62rem] -->
 
-    <div class="mr-8 pr-12 text-justify mt-6 py-6 px-5 border flex size-fit">
+    <!--     <div
+      class="flex justify-center items-end
+    col-start-3
+    lg:col-start-2 lg:col-span-2"
+    >
+      Copyright (c) 2024 - Todos los derechos reservados
+    </div> -->
+    <!-- border mr-8 pr-12 text-justify mt-6 py-6 px-5 flex size-fit -->
+    <!-- mt-2 mb-8 -->
+    <div
+      class="border py-4 px-5 mb-3 flex items-center justify-center self-center
+      col-start-4 col-span-2
+      lg:col-start-4 lg:col-span-1 lg:mr-10"
+    >
       Esta página está en constante evolución y seguirá recibiendo mejoras a
       medida que continúe perfeccionando mis habilidades como programador. Cada
       actualización reflejará mi crecimiento, esfuerzo y dedicación para
       ofrecerte una mejor experiencia.
     </div>
+
+    <div class="col-span-5 lg:col-span-4">
+      <div class="flex justify-center">
+        Copyright (c) 2024 - Todos los derechos reservados
+      </div>
+    </div>
   </div>
-  <div class="text-center">
-    Copyright (c) 2024 - Todos los derechos reservados
-  </div>
+
+  <!--! ESTO FUE COMENTADO PORQUE ME ROMPIA EL RESPONSIVE DE MI PAGINA, ME agrandaba el ancho total del vw de mobile, esto estaba utilizado para separar los elementos del footer, buscar alternativa  -->
+  <!-- <div class="px-[32rem]"></div> -->
+  <!--! Hasta aca xd, lo de abajo ni idea  -->
+  <!-- ml-[62rem] -->
 </footer>
