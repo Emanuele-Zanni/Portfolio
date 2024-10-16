@@ -26,21 +26,20 @@ const { description, title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <!--! Este es mi Background en un div, para hacerlo responsive, tuve que utilizar w-[100vh] para que ocupase toda la pantalla en algunas resoluciones mobile con W menores a 860px, y para que funcione nomral en pantalla de PC (ya que ahora se estaba deformando en la vista normal, osea, se invirtieron los roles) utilize el breakpoint md:w-screen -->
     <div
-      class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="absolute top-0 z-[-2] h-screen w-[100vh] md:w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
     <Header />
     <slot />
+
     <Footer />
   </body>
 </html>
 <style is:global>
-  :root {
-    color-scheme: light dark;
-  }
-
   html {
+    color: white;
     font-family: system-ui, sans-serif;
     scroll-behavior: smooth;
   }

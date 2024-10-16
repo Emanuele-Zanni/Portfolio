@@ -18,63 +18,65 @@ import Technologies from "../components/Technologies.astro";
   title=" Emanuele Zanni - Desarrollador Web Full Stack y Analista de Sistemas con +3 Años de experiencia"
   description="Confía en Emanuele para crear aplicaciones backend robustas, escalables y pensadas a largo plazo. Con un enfoque en la eficiencia, la seguridad y la sostenibilidad, cada solución está diseñada para adaptarse a las necesidades de tu negocio y evolucionar junto con la tecnología, garantizando un rendimiento óptimo y fiable en cada etapa."
 >
-  <main class="px-4">
+  <main>
     <Section class="py-44 pb-32">
-      <div class="flex flex-row">
-        <img
-          class="rounded-full size-20 mb-4 mr-7"
-          src="https://avatars.githubusercontent.com/u/158765694?v=4"
-          alt="Photo"
-        />
+      <div class="flex flex-col items-center text-center lg:items-start">
+        <div class="flex flex-row">
+          <img
+            class="rounded-full size-20 mb-4 mr-7"
+            src="https://avatars.githubusercontent.com/u/158765694?v=4"
+            alt="Photo"
+          />
 
-        <h1
-          class="items-center text-white text-3xl font-bold flex flex-row gap-x-4 pt-2.5 mb-2
-          md:text-4xl
+          <h1
+            class="items-center text-white text-3xl font-bold flex flex-row gap-x-4 pt-2.5 mb-2
+          text-5xl
           lg:pb-10 lg:text-5xl"
-        >
-          Hola, soy Emanuele <a
-            class="flex justify-center items-center"
-            href="https://www.linkedin.com/in/emanuele-zanni/"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            <Badge>Disponible para trabajar</Badge>
-          </a>
-        </h1>
+            Hola, soy Emanuele <a
+              class="flex justify-center items-center"
+              href="https://www.linkedin.com/in/emanuele-zanni/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Badge>Disponible para trabajar</Badge>
+            </a>
+          </h1>
+        </div>
+
+        <h2 class="lg:text-2xl text-3xl text-wrap max-w-[700px]">
+          <span>+3 Años de Experiencia.</span>
+          <span class="text-yellow-200/90"
+            >Desarrollador Web Full Stack y Analista de Sistemas</span
+          >
+          de
+          <span class="text-blue-400/100">
+            Capital Federal, Buenos Aires, Argentina
+          </span>
+        </h2>
+
+        <nav class="flex gap-9 md:gap-4 mt-16 lg:mt-8 flex-wrap justify-center">
+          <SocialPill href="https://www.linkedin.com/in/emanuele-zanni/">
+            <LinkedInIcon class="size-14 md:size-6" />
+            <span class="text-3xl md:text-base">LinkedIn</span>
+          </SocialPill>
+
+          <SocialPill href="https://github.com/Emanuele-Zanni">
+            <GithubIcon class="size-14 md:size-6" />
+            <span class="text-3xl md:text-base">GitHub</span>
+          </SocialPill>
+
+          <SocialPill href="mailto:emazanni2022@gmail.com">
+            <MailIcon class="size-14 md:size-6" />
+            <span class="text-3xl md:text-base">Emazanni2022@gmail.com</span>
+          </SocialPill>
+        </nav>
       </div>
-
-      <h2 class="text-xl lg:text-2xl text-2xl text-wrap max-w-[700px]">
-        <span>+3 Años de Experiencia.</span>
-        <span class="text-yellow-200/90"
-          >Desarrollador Web Full Stack y Analista de Sistemas</span
-        >
-        de
-        <span class="text-blue-400/100">
-          Capital Federal, Buenos Aires, Argentina
-        </span>
-      </h2>
-
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/emanuele-zanni/">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-
-        <SocialPill href="https://github.com/Emanuele-Zanni">
-          <GithubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-
-        <SocialPill href="mailto:emazanni2022@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          Emazanni2022@gmail.com
-        </SocialPill>
-      </nav>
     </Section>
 
-    <Section id="proyectos">
+    <Section id="proyectos" class="px-3 lg:px-0">
       <h2
-        class="text-[2.6rem] font-semibold mb-6 flex gap-x-3 items-center justify-center"
+        class="text-[2.9rem] lg:text-[2.6rem] font-semibold mb-6 flex gap-x-3 items-center justify-center"
       >
         <CodeIcon class="size-9" />
         Proyectos
@@ -84,7 +86,7 @@ import Technologies from "../components/Technologies.astro";
 
     <Section id="experiencia">
       <h2
-        class="text-[2.6rem] font-semibold mb-6 flex gap-x-3 items-center justify-center"
+        class="text-[2.9rem] lg:text-[2.6rem] font-semibold mb-6 flex gap-x-3 items-center justify-center"
       >
         <BriefcaseIcon class="size-9" />
         Experiencia Laboral
@@ -93,9 +95,8 @@ import Technologies from "../components/Technologies.astro";
     </Section>
 
     <Section id="tecnologias">
-      <div></div>
       <h2
-        class="text-[2.6rem] font-semibold mb-6 flex gap-x-3 items-center justify-center"
+        class="text-[2.9rem] lg:text-[2.6rem] font-semibold mb-6 flex gap-x-3 items-center justify-center"
       >
         <TechsIcon class="size-9" />
         Tecnologias
